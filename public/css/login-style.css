@@ -1,0 +1,54 @@
+.login-container {
+    text-align: center; 
+    width: 100%;
+    height: auto;
+    
+}
+form {
+    margin: 4vh;
+    padding: 4vh;
+    width: 50vw; 
+    height: 30vh;
+    flex-direction: column;
+    justify-content: center;
+    background: #f5e7d5;
+    border-radius: 66px;
+    border-style: none;
+   
+}
+input{
+    min-width: 45vw;
+}
+button{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-right: 5vw;
+    min-width: 20vw;
+    float: left;
+} 
+
+.register{
+    margin-top: 3.5vh;
+    font: italic normal 300 20px/20px Segoe UI;  
+    color: #464646; 
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+a:link
+{
+    color: #000000;
+    
+}
+/*odwiedzony link*/
+a:visted
+{
+	color: #000000;
+}
+/*po najechaniu na link*/
+a:hover
+{
+	color: #000000;
+
+}
