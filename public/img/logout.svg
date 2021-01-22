@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140">
+  <g id="Component_1_4" data-name="Component 1 – 4">
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="140" height="140" rx="15" fill="#fff" opacity="0.22"/>
+  </g>
+  <g id="Icon_feather-log-out" data-name="Icon feather-log-out" transform="translate(9.25 9.223)" opacity="0.6">
+    <path id="Path_4" data-name="Path 4" d="M45.75,105.75H23.083c-6.259,0-11.333-4.676-11.333-10.444V22.194c0-5.768,5.074-10.444,11.333-10.444H45.75" transform="translate(0 3.105)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+    <path id="Path_5" data-name="Path 5" d="M62.667,103.442l8.75-8.315,8.75-8.315,7.5-7.127,6.667-6.335,8.333-7.919L86.238,49.817,73.917,38.108,62.667,27.417" transform="translate(3.083 -5.794)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" opacity="0.97"/>
+    <path id="Path_6" data-name="Path 6" d="M69.25,47h-34" transform="translate(-0.88 10.623)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+  </g>
+</svg>
