@@ -1,0 +1,19 @@
+form{
+    margin-top: 4vh;
+    padding: 4vh;
+    width: 50vw;   
+    
+    text-align: center;
+    flex-direction: column;
+    background: #f5e7d5;
+    border-radius: 66px;
+    border-style: none;
+}
+button{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    min-width: 20vw;
+}
+input{
+    min-width: 45vw;
+}
