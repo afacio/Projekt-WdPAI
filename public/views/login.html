@@ -1,0 +1,41 @@
+<?php
+
+	session_start();
+	
+	if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true))
+	{
+		header('Location: home.php');
+		exit();
+	}
+
+?>
+
+<!DOCTYPE html>
+<head>
+    <title>LOGIN PAGE</title>
+    <link rel="stylesheet" type="text/css" href="../css/login-style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="../img/duze-logo-z-napisem.svg" class="respo">
+        </div>
+        <div class="logo-container">
+            <form action="zaloguj.php" method="post">
+                <input name="email" type="text" placeholder="email" style="margin-top: 4vh;">
+                <input name="password" type="password" placeholder="password">
+                <button>LOGIN</button>
+                <div class="register">
+                    Not a member? 
+                    <a href="register.php" title="Signup page">
+                         Signup now
+                    </a>
+                </div>
+            </form>
+        </div>    
+    </div>
+
+</body>
