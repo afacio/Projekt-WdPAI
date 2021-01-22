@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140">
+  <g id="Component_1_10" data-name="Component 1 – 10">
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="140" height="140" rx="15" fill="#fff" opacity="0.22"/>
+  </g>
+  <path id="Icon_awesome-facebook-square" data-name="Icon awesome-facebook-square" d="M83.929,2.25H10.071A10.071,10.071,0,0,0,0,12.321V86.179A10.071,10.071,0,0,0,10.071,96.25h28.8V64.292H25.651V49.25H38.869V37.785c0-13.04,7.763-20.244,19.654-20.244a80.082,80.082,0,0,1,11.649,1.016v12.8H63.612c-6.465,0-8.481,4.012-8.481,8.126V49.25H69.562L67.254,64.292H55.131V96.25h28.8A10.071,10.071,0,0,0,94,86.179V12.321A10.071,10.071,0,0,0,83.929,2.25Z" transform="translate(23 18.027)" opacity="0.6"/>
+</svg>
