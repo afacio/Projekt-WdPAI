@@ -1,0 +1,57 @@
+.pasek{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    
+}
+.galeria{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+
+    width: auto;
+    height: auto;
+}
+.uklad{
+    
+
+    
+    width: auto;
+    text-align: center;
+    background:#efdec7;
+    border-radius: 25px;
+    margin: 3vw;
+    color:#707070;
+    float: left;
+    
+
+}
+.kafelek{
+    float: left;
+    background: #f2e5d3 0% 0% no-repeat padding-box;
+    width: 270px;
+    height: 200px;
+    margin: 1.5vh;   
+}
+.kostka{
+    float: left;
+	text-decoration: none;
+    margin: 1vh;
+    border: none;
+}
+.male-logo{
+    float: left;
+    margin: 1vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    
+}
+.kostka:hover{
+    background-color: #FFFFFF;
+    color: #000000;
+    cursor: pointer;    
+}
