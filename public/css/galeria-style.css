@@ -1,0 +1,62 @@
+.kategorie{
+    width: auto;
+    text-align: center;
+    background:#efdec7;
+    border-radius: 25px;
+    margin: 3vw;
+    color:#707070;
+    justify-content: center;
+    
+}
+.uklad{
+    width: auto;
+    text-align: center;
+    justify-content: center;
+    background:#efdec7;
+    border-radius: 25px;
+    margin: 3vw;
+    color:#707070;
+    
+}
+.galeria-container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    float: left;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 3vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+button{
+    margin-top: 1vh;
+    background: #faf3eb ;
+    border: none;
+    opacity: 0.5;
+    height: 6vh;
+    width: 20vw;
+}    
+    
+.container-obrazy-poziom{
+    display: flex;
+    flex-direction: row; 
+    text-align: center;
+    justify-content: center;   
+   
+   
+}
+.kafelek{
+    float: left;
+    background: #f2e5d3 0% 0% no-repeat padding-box;
+    max-width: 270px;
+    max-height: 200px;
+    margin: 1.5vh;   
+}
