@@ -13,6 +13,12 @@ button{
     margin-top: 2vh;
     margin-bottom: 2vh;
     min-width: 20vw;
+    background: #faf3eb ;
+    border: 1px solid #49494967;
+    border-radius: 17px;
+    opacity: 0.5;
+    height: 6vh;
+    width: auto;
 }
 input{
     min-width: 45vw;
