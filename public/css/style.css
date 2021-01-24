@@ -1,11 +1,12 @@
 body{
     margin: 0;
-    background: #D9AB6F78;
+    background: #ead4b7;
     font: italic normal 1.5vw/1.5vw Segoe UI;
     color: #c2bdbd67;
 }
 
 .container{
+    background: #ead4b7;
     width: 100%;
     height: auto;
     display: flex;
@@ -17,15 +18,8 @@ body{
     max-width: 50vw;
     height: auto;  
 }
-button{
-    background: #faf3eb ;
-    border: 1px solid #49494967;
-    border-radius: 17px;
-    opacity: 0.5;
-    height: 6vh;
-    width: auto;
-       
-}
+
+
 button:hover{
     background-color: #FFFFFF;
     border-radius: 17px;
@@ -42,6 +36,20 @@ input{
     font: italic normal 300 20px/20px Segoe UI;
     border-bottom: 1px solid #92929267;
     margin-bottom: 3%;
+}
+.male-logo{
+    float: left;
+    margin: 1vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    
+}
+.kafelek{
+    float: left;
+    background: #f2e5d3 0% 0% no-repeat padding-box;
+    max-width: 270px;
+    max-height: 200px;
+    margin: 1.5vh;   
 }
 
 @media screen and (max-width: 411px) {
