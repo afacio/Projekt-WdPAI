@@ -25,6 +25,12 @@ button{
     margin-right: 5vw;
     min-width: 20vw;
     float: left;
+    background: #faf3eb ;
+    border: 1px solid #49494967;
+    border-radius: 17px;
+    opacity: 0.5;
+    height: 6vh;
+    width: auto;
 } 
 
 .register{
