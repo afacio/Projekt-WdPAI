@@ -14,9 +14,16 @@ form {
     font-size: 2vw; 
 }  
 button{
+    background: #faf3eb ;
+    border: 1px solid #49494967;
+    border-radius: 17px;
+    opacity: 0.5;
+    height: 6vh;
+    width: auto;
     min-width: 33vw;
     margin: 2vw;
-} 
+}  
+       
 
 @media screen and (max-width: 411px) {
     button {
