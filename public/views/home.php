@@ -31,18 +31,19 @@
                 <div class="uklad">
                     <h1 style="margin: 2vh;">ODKRYJ</h1>
                     <div class=container-obrazy>
-                        <div class="kafelek">
-
+                        <div class="kafelek" >
+                            <img class="mem"  src="public/zdjecia/1.jpg">
                         </div>
                         <div class="kafelek" >
+                            <img class="mem"  src="public/zdjecia/2.jpg">
                         </div>  
                     </div>       
                     <div class=container-obrazy>
                         <div class="kafelek" >
-
+                            <img class="mem"  src="public/zdjecia/3.jpg">
                         </div>
-                        <div class="kafelek">
-
+                        <div class="kafelek" >
+                            <img class="mem"  src="public/zdjecia/4.jpg">
                         </div>
                     </div>
                 </div>
@@ -51,17 +52,18 @@
                     <h1 style="margin: 2vh;">GALERIA</h1>
                     <div class=container-obrazy>
                         <div class="kafelek">
-
+                            <img class="mem"  src="public/zdjecia/5.jpg">
                         </div>
                         <div class="kafelek" >
+                            <img class="mem"  src="public/zdjecia/6.jpg">
                         </div>  
                     </div>       
                     <div class=container-obrazy>
                         <div class="kafelek" >
-
+                            <img class="mem" src="public/zdjecia/7.jpg">
                         </div>
                         <div class="kafelek">
-
+                            <img class="mem" src="public/zdjecia/8.jpg">
                         </div>
                     </div>
                 </div>
