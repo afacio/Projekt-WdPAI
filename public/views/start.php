@@ -16,7 +16,7 @@
         </div>
         <form>
             <button ><a href="login">LOGIN</a></button>
-            <a><button href="register">CREATE ACCOUNT</button></a>
+            <button><a href="register">CREATE ACCOUNT</a></button>
         </form>
     </div>
 </body>
