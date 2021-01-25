@@ -47,9 +47,17 @@ input{
 .kafelek{
     float: left;
     background: #f2e5d3 0% 0% no-repeat padding-box;
+    min-width: 270px;
+    height: auto;
+    margin: 1.5vh;  
+    
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.mem{
     max-width: 270px;
-    max-height: 200px;
-    margin: 1.5vh;   
+    height: auto;
+    background-size: contain;   
 }
 
 @media screen and (max-width: 411px) {
