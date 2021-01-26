@@ -12,5 +12,6 @@ Router::get('galeria', 'DefaultController');
 Router::get('odkryj', 'DefaultController');
 Router::post('login', 'SecurityController');
 Router::post('register', 'SecurityController');
+Router::post('upload', 'ProjectController');
 
 Router::run($path);
