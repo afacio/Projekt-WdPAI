@@ -3,7 +3,6 @@
     <title>LOGIN PAGE</title>
     <link rel="stylesheet" type="text/css" href="public/css/login-style.css">
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 <body>
