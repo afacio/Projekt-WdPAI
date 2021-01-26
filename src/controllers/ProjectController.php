@@ -19,11 +19,11 @@ class ProjectController extends AppController {
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']);
 
             // TODO create new project object and save it in database
-            $project = new Project($_POST['title'], $_POST['description'], $_FILES['file']['name']);
+            $project = new Project($_POST['title'], $_FILES['file']['name']);
 
             return $this->render('home', ['messages' => $this->message]);
         }
-        return $this->render('add-project', ['messages' => $this->message]);
+        return $this->render('upload', ['messages' => $this->message]);
     }
 
     private function validate(array $file): bool
