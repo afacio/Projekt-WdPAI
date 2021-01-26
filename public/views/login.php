@@ -13,19 +13,18 @@
         </div>
         <div class="logo container">
 					<form class="login" action="login" method="POST">
-						<?php
-								if(isset($messages))
-								{
-									foreach($messages as $message) 
-									{
-										echo $message;
-									}
-								}
-						?>
-						<input name="email" type="text" placeholder="email@email.com">
-						<input name="password" type="password" placeholder="password">
-						<a href="register">Nie masz konta? Zarejestruj się</a>
-						<button type="submit">LOGIN</button>
+                        <div class="messages">
+                            <?php
+                            if(isset($messages)){
+                                foreach($messages as $message) {
+                                    echo $message;
+                                }
+                            }
+                            ?>
+                        </div>
+                        <input name="email" type="text" placeholder="email@email.com">
+                        <input name="password" type="password" placeholder="password">
+                        <button type="submit">LOGIN</button>
 					</form>
 				</div>    
     </div>
