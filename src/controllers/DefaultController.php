@@ -4,6 +4,11 @@ require_once 'AppController.php';
 
 class DefaultController extends AppController {
 
+    public function index()
+    {
+        $this->render('start');
+    }
+
     public function login()
     {
         $this->render('login');
@@ -23,6 +28,7 @@ class DefaultController extends AppController {
     {
         $this->render('start');
     }
+    /*
     public function galeria()
     {
         $this->render('galeria');
@@ -31,8 +37,5 @@ class DefaultController extends AppController {
     {
         $this->render('odkryj');
     }
-    public function upload()
-    {
-        $this->render('upload');
-    }
+    */
 }
