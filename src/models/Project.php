@@ -1,8 +1,6 @@
 <?php
 
-
-class Project
-{
+class Project {
     private $title;
     private $image;
 
