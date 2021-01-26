@@ -31,4 +31,8 @@ class DefaultController extends AppController {
     {
         $this->render('odkryj');
     }
+    public function upload()
+    {
+        $this->render('upload');
+    }
 }
