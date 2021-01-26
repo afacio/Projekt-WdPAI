@@ -32,10 +32,10 @@
                     <h1 style="margin: 2vh;">ODKRYJ</h1>
                     <div class=container-obrazy>
                         <div class="kafelek" >
-                            <img class="mem"  src="public/zdjecia/1.jpg">
+                            <img class="mem"  src="public/uploads/<?= $project->getImage()?>">
                         </div>
                         <div class="kafelek" >
-                            <img class="mem"  src="public/zdjecia/2.jpg">
+                            <img class="mem"  src="public/zdjecia/10.jpg">
                         </div>  
                     </div>       
                     <div class=container-obrazy>
@@ -43,7 +43,7 @@
                             <img class="mem"  src="public/zdjecia/3.jpg">
                         </div>
                         <div class="kafelek" >
-                            <img class="mem"  src="public/zdjecia/4.jpg">
+                            <img class="mem"  src="public/zdjecia/9.jpg">
                         </div>
                     </div>
                 </div>
