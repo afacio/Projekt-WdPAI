@@ -29,10 +29,10 @@
         <div class="tresc" style="clear: both; width: 100%; height: auto;">
             <div class=galeria>
 
-                <section class="projects">
+                <section class="kafelek">
                     <?php foreach ($projects as $project): ?>
                         <div id="<?= $project->getId(); ?>">
-                            <img src="public/uploads/<?= $project->getImage(); ?>">
+                            <img class="mem" src="public/uploads/<?= $project->getImage(); ?>">
                             <div>
                                 <h2><?= $project->getTitle(); ?></h2>
                                 <div class="social-section">
