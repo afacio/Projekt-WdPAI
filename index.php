@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require 'Routing.php';
 
 $path = trim($_SERVER['REQUEST_URI'], '/');
@@ -11,6 +13,7 @@ Router::get('start', 'DefaultController');
 Router::get('galeria', 'ProjectController');
 //Router::get('odkryj', 'DefaultController');
 Router::post('login', 'SecurityController');
+Router::post('logout', 'SecurityController');
 Router::post('register', 'SecurityController');
 Router::post('addProject', 'ProjectController');
 Router::post('search', 'ProjectController');
