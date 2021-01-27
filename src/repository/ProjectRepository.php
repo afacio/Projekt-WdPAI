@@ -1,7 +1,7 @@
 <?php
 
 require_once 'Repository.php';
-require_once __DIR__.'/../models/Project.php';
+require_once __DIR__ . '/../models/Project.php';
 
 class ProjectRepository extends Repository
 {
@@ -58,10 +58,43 @@ class ProjectRepository extends Repository
         foreach ($projects as $project) {
             $result[] = new Project(
                 $project['title'],
-                $project['image']
+                $project['image'],
+                $project['like'],
+                $project['dislike'],
+                $project['id']
             );
         }
 
         return $result;
+    }
+
+    public function getProjectByTitle(string $searchString)
+    {
+        $searchString = '%' . strtolower($searchString) . '%';
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM projects WHERE LOWER(title) LIKE :search');
+        $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function like(int $id) {
+        $stmt = $this->database->connect()->prepare('
+            UPDATE projects SET "like" = "like" + 1 WHERE id = :id
+         ');
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+    }
+
+    public function dislike(int $id) {
+        $stmt = $this->database->connect()->prepare('
+            UPDATE projects SET dislike = dislike + 1 WHERE id = :id
+         ');
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
     }
 }
