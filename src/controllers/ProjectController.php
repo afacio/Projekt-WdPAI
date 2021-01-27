@@ -3,6 +3,7 @@
 require_once 'AppController.php';
 require_once __DIR__ . '/../models/Project.php';
 require_once __DIR__ . '/../repository/ProjectRepository.php';
+require_once __DIR__ . '/../support/Authorization.php';
 
 class ProjectController extends AppController
 {
@@ -14,10 +15,13 @@ class ProjectController extends AppController
     private $message = [];
     private $projectRepository;
 
+    private $authorization;
+
     public function __construct()
     {
         parent::__construct();
         $this->projectRepository = new ProjectRepository();
+        $this->authorization = new Authorization();
     }
 
     public function projects()
@@ -28,17 +32,21 @@ class ProjectController extends AppController
 
     public function addProject()
     {
+        if (!$this->authorization->checkIfAuthenticated()) {
+            $this->redirect('/login');
+        }
+
         if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
             move_uploaded_file(
                 $_FILES['file']['tmp_name'],
                 dirname(__DIR__) . self::UPLOAD_DIRECTORY . $_FILES['file']['name']
             );
 
-            // TODO create new project object and save it in database
-            $project = new Project($_POST['title'], $_FILES['file']['name']);
+            $user = $this->authorization->getAuthenticated();
+            $project = new Project($_POST['title'], $_FILES['file']['name'], $user->getId());
             $this->projectRepository->addProject($project);
 
-            return $this->render('galeria', [
+            return $this->render('home', [
                 'messages' => $this->message,
                 'projects' => $this->projectRepository->getProjects()
             ]);
@@ -56,7 +64,6 @@ class ProjectController extends AppController
             $decoded = json_decode($content, true);
 
             header('Content-type: application/json');
-            http_response_code(200);
 
             echo json_encode($this->projectRepository->getProjectByTitle($decoded['search']));
         }
@@ -64,12 +71,10 @@ class ProjectController extends AppController
 
     public function like(int $id) {
         $this->projectRepository->like($id);
-        http_response_code(200);
     }
 
     public function dislike(int $id) {
         $this->projectRepository->dislike($id);
-        http_response_code(200);
     }
 
     private function validate(array $file): bool
