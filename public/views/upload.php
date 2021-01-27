@@ -29,7 +29,7 @@
         <div class="tresc" style="clear: both; width: 100%; height: auto;">
             <div class=galeria>
                 <h1>UPLOAD</h1>
-                <form action="addProject" method="post" enctype="multipart/form-data">
+                <form action="upload" method="post" enctype="multipart/form-data">
                     <?php
                     if(isset($messages)){
                         foreach($messages as $message){
