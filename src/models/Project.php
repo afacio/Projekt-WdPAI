@@ -3,6 +3,8 @@
 class Project {
     private $title;
     private $image;
+    private $like;
+    private $dislike;
 
     public function __construct($title, $image)
     {
