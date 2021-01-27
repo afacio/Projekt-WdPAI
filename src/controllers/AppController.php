@@ -32,4 +32,10 @@ class AppController {
         }
         print $output;
     }
+
+    protected function redirect(string $path)
+    {
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}{$path}");
+    }
 }
