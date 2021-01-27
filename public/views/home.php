@@ -9,10 +9,10 @@
 <body>
     <div class="container">
         <div class="pasek">
-            <a class="kostka" href="">
-                <img src="public/img/stetting.svg">  
+            <a class="kostka" href="addProject">
+                <img src="public/img/plus.svg">
             </a>
-            <a class="kostka" href="">
+            <a class="kostka" href="login">
                 <img src="public/img/logout.svg">
             </a>
             
@@ -29,12 +29,20 @@
         <div class="tresc" style="clear: both; width: 100%; height: auto;">
             <div class=galeria>
 
-                <form class="form" action="odkryj" method="POST">
-                    <button type="submit">ODKRYJ</button>
-                </form>
-                <form class="form" action="galeria" method="POST">
-                    <button type="submit">GALERIA</button>
-                </form>
+                <section class="projects">
+                    <?php foreach ($projects as $project): ?>
+                        <div id="<?= $project->getId(); ?>">
+                            <img src="public/uploads/<?= $project->getImage(); ?>">
+                            <div>
+                                <h2><?= $project->getTitle(); ?></h2>
+                                <div class="social-section">
+                                    <i class="fas fa-heart"> <?= $project->getLike(); ?></i>
+                                    <i class="fas fa-minus-square"> <?= $project->getDislike(); ?></i>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </section>
             </div>
         </div>
     </div>
