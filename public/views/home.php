@@ -28,45 +28,13 @@
         </div>
         <div class="tresc" style="clear: both; width: 100%; height: auto;">
             <div class=galeria>
-                <div class="uklad">
-                    <h1 style="margin: 2vh;">ODKRYJ</h1>
-                    <div class=container-obrazy>
-                        <div class="kafelek" >
-                            <img class="mem"  src="public/uploads/<?= $project->getImage()?>">
-                        </div>
-                        <div class="kafelek" >
-                            <img class="mem"  src="public/zdjecia/10.jpg">
-                        </div>  
-                    </div>       
-                    <div class=container-obrazy>
-                        <div class="kafelek" >
-                            <img class="mem"  src="public/zdjecia/3.jpg">
-                        </div>
-                        <div class="kafelek" >
-                            <img class="mem"  src="public/zdjecia/9.jpg">
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="uklad">
-                    <h1 style="margin: 2vh;">GALERIA</h1>
-                    <div class=container-obrazy>
-                        <div class="kafelek">
-                            <img class="mem"  src="public/zdjecia/5.jpg">
-                        </div>
-                        <div class="kafelek" >
-                            <img class="mem"  src="public/zdjecia/6.jpg">
-                        </div>  
-                    </div>       
-                    <div class=container-obrazy>
-                        <div class="kafelek" >
-                            <img class="mem" src="public/zdjecia/7.jpg">
-                        </div>
-                        <div class="kafelek">
-                            <img class="mem" src="public/zdjecia/8.jpg">
-                        </div>
-                    </div>
-                </div>
+
+                <form class="form" action="odkryj" method="POST">
+                    <button type="submit">ODKRYJ</button>
+                </form>
+                <form class="form" action="galeria" method="POST">
+                    <button type="submit">GALERIA</button>
+                </form>
             </div>
         </div>
     </div>
