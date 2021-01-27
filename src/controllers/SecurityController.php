@@ -1,48 +1,55 @@
 <?php
 
 require_once 'AppController.php';
-require_once __DIR__ .'/../models/User.php';
-require_once __DIR__.'/../repository/UserRepository.php';
+require_once __DIR__ . '/../models/User.php';
+require_once __DIR__ . '/../repository/UserRepository.php';
+require_once __DIR__ . '/../support/Authorization.php';
 
 class SecurityController extends AppController {
 
     private $userRepository;
 
+    private $authorization;
+
     public function __construct()
     {
         parent::__construct();
         $this->userRepository = new UserRepository();
+        $this->authorization = new Authorization();
     }
 
     public function login()
     {
+        if ($this->authorization->checkIfAuthenticated()) {
+            $this->redirect('/home');
+        }
+
         if (!$this->isPost()) {
             return $this->render('login');
         }
 
         $email = $_POST['email'];
-        $password = md5($_POST['password']);
+        $password = $_POST['password'];
 
-        $user = $this->userRepository->getUser($email);
-
-        if (!$user) {
+        if (!$this->authorization->login($email, $password)) {
             return $this->render('login', ['messages' => ['User not found!']]);
         }
 
-        if ($user->getEmail() !== $email) {
-            return $this->render('login', ['messages' => ['User with this email not exist!']]);
-        }
+        $this->redirect('/home');
+    }
 
-        if ($user->getPassword() !== $password) {
-            return $this->render('login', ['messages' => ['Wrong password!']]);
-        }
-
-        $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/home");
+    public function logout()
+    {
+        $this->authorization->logout();
+        $this->redirect('/login');
     }
 
     public function register()
     {
+        if ($this->authorization->checkIfAuthenticated()) {
+            $this->redirect('/home');
+        }
+
         if (!$this->isPost()) {
             return $this->render('register');
         }
@@ -58,7 +65,11 @@ class SecurityController extends AppController {
             return $this->render('register', ['messages' => ['Please provide proper password']]);
         }
 
-        $user = new User($email, md5($password), $name, $surname);
+        $options = [
+            'cost' => 12,
+        ];
+
+        $user = new User(null, $email, password_hash($password, PASSWORD_BCRYPT, $options), $name, $surname);
         $user->setPhone($phone);
 
         $this->userRepository->addUser($user);
