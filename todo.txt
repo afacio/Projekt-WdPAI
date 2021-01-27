@@ -1,4 +1,1 @@
 Dodać wyświetlanie zdjęć
-Rejestracja użytkowników
-przyciski w stronie startowej
-logowanie użytkownika
