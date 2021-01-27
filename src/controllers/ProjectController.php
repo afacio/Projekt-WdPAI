@@ -19,7 +19,7 @@ class ProjectController extends AppController {
         $this->projectRepository = new ProjectRepository();
     }
 
-    public function addProject()
+    public function upload()
     {
         if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
             move_uploaded_file(
@@ -52,10 +52,10 @@ class ProjectController extends AppController {
         return true;
     }
 
-    public function home()
+    public function galeria()
     {
         $projects = $this->projectRepository->getProjects();
-        $this->render('home', ['projects' => $projects]);
+        $this->render('galeria', ['projects' => $projects]);
 
     }
 }
