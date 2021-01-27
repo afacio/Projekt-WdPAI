@@ -9,16 +9,6 @@ class DefaultController extends AppController {
         $this->render('start');
     }
 
-    public function login()
-    {
-        $this->render('login');
-    }
-
-    public function register()
-    {
-        $this->render('register');
-    }
-
     public function home()
     {
         $this->render('home');
