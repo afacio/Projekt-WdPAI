@@ -44,6 +44,7 @@ class ProjectRepository extends Repository
             $assignedById
         ]);
     }
+
     public function getProjects(): array
     {
         $result = [];
