@@ -32,7 +32,6 @@ input{
     width: auto;
     border-style: none;
     text-align: left;
-    text-align: bottom;
     font: italic normal 300 20px/20px Segoe UI;
     border-bottom: 1px solid #92929267;
     margin-bottom: 3%;
@@ -59,7 +58,12 @@ input{
     height: auto;
     background-size: contain;   
 }
-
+.no-valid {
+    border: 3px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
+}
 @media screen and (max-width: 411px) {
    
 }
