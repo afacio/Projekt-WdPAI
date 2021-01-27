@@ -18,14 +18,4 @@ class DefaultController extends AppController {
     {
         $this->render('start');
     }
-    /*
-    public function galeria()
-    {
-        $this->render('galeria');
-    }
-    public function odkryj()
-    {
-        $this->render('odkryj');
-    }
-    */
 }
