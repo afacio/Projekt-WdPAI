@@ -31,7 +31,9 @@ class ProjectController extends AppController {
             $project = new Project($_POST['title'], $_FILES['file']['name']);
             $this->projectRepository->addProject($project);
 
-            return $this->render('home', ['messages' => $this->message]);
+            return $this->render('home', [
+                'projects' => $this->projectRepository->getProjects(),
+                'messages' => $this->message]);
         }
         return $this->render('upload', ['messages' => $this->message]);
     }
@@ -48,5 +50,12 @@ class ProjectController extends AppController {
             return false;
         }
         return true;
+    }
+
+    public function home()
+    {
+        $projects = $this->projectRepository->getProjects();
+        $this->render('home', ['projects' => $projects]);
+
     }
 }
