@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140">
+  <g id="Component_1_3" data-name="Component 1 – 3">
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="140" height="140" rx="15" fill="#fff" opacity="0.22"/>
+  </g>
+  <g id="Icon_feather-plus-circle" data-name="Icon feather-plus-circle" transform="translate(15.167 13.167)" opacity="0.6">
+    <path id="Path_11" data-name="Path 11" d="M101.833,54.833a47,47,0,1,1-47-47,47,47,0,0,1,47,47Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="7.833"/>
+    <path id="Path_12" data-name="Path 12" d="M47,31.333V62.667" transform="translate(7.833 7.833)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="7.833"/>
+    <path id="Path_13" data-name="Path 13" d="M31.333,47H62.667" transform="translate(7.833 7.833)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="7.833"/>
+  </g>
+</svg>
+
