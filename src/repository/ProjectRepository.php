@@ -34,14 +34,11 @@ class ProjectRepository extends Repository
             VALUES (?, ?, ?, ?)
         ');
 
-        //TODO you should get this value from logged user session
-        $assignedById = 1;
-
         $stmt->execute([
             $project->getTitle(),
             $project->getImage(),
             $date->format('Y-m-d'),
-            $assignedById
+            $project->getAssignedBy(),
         ]);
     }
 
