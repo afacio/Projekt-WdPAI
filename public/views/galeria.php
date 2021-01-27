@@ -12,29 +12,18 @@
             <img src="public/img/male-logo-z-napisem.svg" class="male-logo">
         </div>
         <div class=galeria-container>
-            <div class="kategorie">
-                <h1 style=" margin: 2vh;">KATEGORIE</h1>
-                <form>
-                    <button class="ketegoria">Kategoria 1</button>
-                    <button class="ketegoria">Kategoria 2</button>
-                    <button class="ketegoria">Kategoria 3</button>
-                    <button class="ketegoria">Kategoria 4</button>
-                    <button class="ketegoria">Kategoria 5</button>
 
-                </form>
-            </div>
             <div class="uklad">
-                <h1 style="margin: 2vh;">ODKRYJ</h1>
+                <h1 style="margin: 2vh;">GALERIA</h1>
                 <div class="container-obrazy-poziom">
-                    <div class="kafelek">
-
-                    </div>
-                    <div class="kafelek" >
-
-                    </div>
-                    <div class="kafelek">
-
-                    </div>
+                    <section class="projects">
+                        <?php foreach($projects as $project): ?>
+                            <div id="project-1">
+                                <img src="public/uploads/<?= $project->getImage(); ?>">
+                                
+                            </div>
+                        <?php endforeach; ?>
+                    </section>
                 </div>
                 <div class="container-obrazy-poziom">
                     <div class="kafelek">
