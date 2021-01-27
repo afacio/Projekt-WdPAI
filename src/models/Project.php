@@ -4,14 +4,16 @@ class Project
 {
     private $title;
     private $image;
+    private $assignedBy;
     private $like;
     private $dislike;
     private $id;
 
-    public function __construct($title, $image, $like = 0, $dislike = 0, $id = null)
+    public function __construct($title, $image, $assignedBy, $like = 0, $dislike = 0, $id = null)
     {
         $this->title = $title;
         $this->image = $image;
+        $this->assignedBy = $assignedBy;
         $this->like = $like;
         $this->dislike = $dislike;
         $this->id = $id;
@@ -35,6 +37,16 @@ class Project
     public function setImage($image)
     {
         $this->image = $image;
+    }
+
+    public function getAssignedBy()
+    {
+        return $this->assignedBy;
+    }
+
+    public function setAssignedBy($assignedBy): void
+    {
+        $this->assignedBy = $assignedBy;
     }
 
     public function getLike(): int
