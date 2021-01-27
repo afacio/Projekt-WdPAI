@@ -12,6 +12,9 @@ Router::get('galeria', 'ProjectController');
 //Router::get('odkryj', 'DefaultController');
 Router::post('login', 'SecurityController');
 Router::post('register', 'SecurityController');
-Router::post('upload', 'ProjectController');
+Router::post('addProject', 'ProjectController');
+Router::post('search', 'ProjectController');
+Router::get('like', 'ProjectController');
+Router::get('dislike', 'ProjectController');
 
 Router::run($path);
