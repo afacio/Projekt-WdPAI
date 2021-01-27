@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>ODKRYJ</title>
+    <title>GALERIA</title>
     <link rel="stylesheet" type="text/css" href="public/css/galeria-style.css">
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,21 +20,10 @@
                         <?php foreach($projects as $project): ?>
                             <div id="project-1">
                                 <img src="public/uploads/<?= $project->getImage(); ?>">
-                                
+
                             </div>
                         <?php endforeach; ?>
                     </section>
-                </div>
-                <div class="container-obrazy-poziom">
-                    <div class="kafelek">
-
-                    </div>
-                    <div class="kafelek">
-
-                    </div>
-                    <div class="kafelek" >
-
-                    </div>
                 </div>
             </div>
         </div>
