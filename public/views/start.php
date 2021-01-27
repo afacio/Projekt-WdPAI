@@ -14,9 +14,11 @@
         <div class="powitanie">
             Witaj, aby przejść dalej zaloguj się<br/> bądź utwórz konto
         </div>
-        <form>
-            <button ><a href="login">LOGIN</a></button>
-            <button><a href="register">CREATE ACCOUNT</a></button>
+        <form class="form" action="login" method="POST">
+            <button type="button"><a href="login">LOGIN</a></button>
+        </form>
+        <form class="form" action="register" method="POST">
+            <button><a href="register"> CREATE ACCOUNT</a></button>
         </form>
     </div>
 </body>
