@@ -80,15 +80,7 @@ class ProjectController extends AppController
             echo json_encode($this->projectRepository->getProjectByTitle($decoded['search']));
         }
     }
-
-    public function like(int $id) {
-        $this->projectRepository->like($id);
-    }
-
-    public function dislike(int $id) {
-        $this->projectRepository->dislike($id);
-    }
-
+    
     private function validate(array $file): bool
     {
         if ($file['size'] > self::MAX_FILE_SIZE) {
