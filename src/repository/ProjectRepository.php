@@ -65,6 +65,31 @@ class ProjectRepository extends Repository
         return $result;
     }
 
+    public function getProjectsByUser($userId): array
+    {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM projects WHERE id_assigned_by = :userId;
+        ');
+        $stmt->execute([
+            $userId
+        ]);
+        $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($projects as $project) {
+            $result[] = new Project(
+                $project['title'],
+                $project['image'],
+                $project['like'],
+                $project['dislike'],
+                $project['id']
+            );
+        }
+
+        return $result;
+    }
+
     public function getProjectByTitle(string $searchString)
     {
         $searchString = '%' . strtolower($searchString) . '%';
