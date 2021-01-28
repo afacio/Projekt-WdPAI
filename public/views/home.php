@@ -29,24 +29,21 @@
             </a>
             
         </div>
-        <div class="tresc" style="clear: both; width: 100%; height: auto;">
-            <div class=galeria>
+        <div class="search-barr">
+            <form class="search-bar">
+                <input placeholder="search image">
+            </form>
+        </div>
+        <div class=galeria>
+            <section class="kafelek">
+                <?php foreach ($projects as $project): ?>
+                    <div id="<?= $project->getId(); ?>">
+                        <img class="mem" src="public/uploads/<?= $project->getImage(); ?>">
 
-                <section class="kafelek">
-                    <?php foreach ($projects as $project): ?>
-                        <div id="<?= $project->getId(); ?>">
-                            <img class="mem" src="public/uploads/<?= $project->getImage(); ?>">
-                            <div>
-                                <h2><?= $project->getTitle(); ?></h2>
-                                <div class="social-section">
-                                    <i class="fas fa-heart"> <?= $project->getLike(); ?></i>
-                                    <i class="fas fa-minus-square"> <?= $project->getDislike(); ?></i>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </section>
-            </div>
+                    </div>
+                <?php endforeach; ?>
+            </section>
+        </div>
         </div>
     </div>
 </body>
