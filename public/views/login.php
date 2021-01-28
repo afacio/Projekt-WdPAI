@@ -11,7 +11,7 @@
             <img src="public/img/duze-logo-z-napisem.svg" class="respo">
         </div>
         <div class="logo container">
-            <form class="login" action="login" method="POST">
+            <form class="login" action="login" method="POST" style="opacity: 0.5;">
                 <div class="messages">
                     <?php
                     if(isset($messages)){
