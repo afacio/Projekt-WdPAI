@@ -11,7 +11,10 @@ class DefaultController extends AppController {
 
     public function home()
     {
-        $this->render('home');
+        $this->render('home', [
+            'projects' => [],
+            'projectsLogged' => []
+        ]);
     }
 
     public function start()
