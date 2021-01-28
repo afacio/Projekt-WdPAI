@@ -19,5 +19,7 @@ Router::post('addProject', 'ProjectController');
 Router::post('search', 'ProjectController');
 Router::get('like', 'ProjectController');
 Router::get('dislike', 'ProjectController');
+Router::get('projects', 'ProjectController');
+Router::get('projectsLogged', 'ProjectController');
 
 Router::run($path);
