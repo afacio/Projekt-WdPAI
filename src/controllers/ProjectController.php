@@ -27,7 +27,7 @@ class ProjectController extends AppController
     public function projects()
     {
         $projects = $this->projectRepository->getProjects();
-        $this->render('home', ['projects' => $projects]);
+        $this->render('projects', ['projects' => $projects]);
     }
 
     public function projectsLogged()
@@ -39,7 +39,7 @@ class ProjectController extends AppController
         $user = $this->authorization->getAuthenticated();
 
         $projects = $this->projectRepository->getProjectsByUser($user->getId());
-        $this->render('home', ['projects' => $projects]);
+        $this->render('projects', ['projects' => $projects]);
     }
 
     public function addProject()
