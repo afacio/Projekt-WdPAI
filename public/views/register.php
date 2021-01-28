@@ -12,7 +12,7 @@
         </div>
 
         <div class="login-container">
-            <form class="register" action="register" method="POST">
+            <form class="register" action="register" method="POST" style="opacity: 0.4;">
                 <div class="messages">
                     <?php
                     if(isset($messages)){
