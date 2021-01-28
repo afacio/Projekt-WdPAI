@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(58deg, #D975929C 0%, #F4FF53A8 100%) no-repeat padding-box;
+    /*background: #ead4b7;*/
+    font: italic normal 1.5vw/1.5vw Segoe UI;
+    color: #c2bdbd67;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}
+.pasek{
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+
+}
+.male-logo{
+    text-decoration: none;
+    margin: 1vh;
+    border: none;
+}
+.kostka{
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    margin: 1vh;
+    border: none;
+}
+
+.kostka>img:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+}
+
+.formy{
+    width: 100%;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+form {
+    margin: 10vh;
+    width: 50%;
+    height: auto;
+    text-align: center;
+
+    font-size: 2vw;
+}
+.przycisk{
+    background: #faf3eb ;
+    border: 1px solid #49494967;
+    border-radius: 17px;
+    opacity: 0.5;
+    height: 6vh;
+    width: auto;
+    min-width: 30vw;
+    margin: 2vw;
+}
+a{
+    text-decoration: none;
+}
