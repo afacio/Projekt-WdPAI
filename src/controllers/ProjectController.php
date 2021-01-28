@@ -27,7 +27,19 @@ class ProjectController extends AppController
     public function projects()
     {
         $projects = $this->projectRepository->getProjects();
-        $this->render('projects', ['projects' => $projects]);
+        $this->render('home', ['projects' => $projects]);
+    }
+
+    public function projectsLogged()
+    {
+        if (!$this->authorization->checkIfAuthenticated()) {
+            $this->redirect('/login');
+        }
+
+        $user = $this->authorization->getAuthenticated();
+
+        $projects = $this->projectRepository->getProjectsByUser($user->getId());
+        $this->render('home', ['projects' => $projects]);
     }
 
     public function addProject()
