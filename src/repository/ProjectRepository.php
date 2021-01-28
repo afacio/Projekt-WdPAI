@@ -102,21 +102,4 @@ class ProjectRepository extends Repository
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function like(int $id) {
-        $stmt = $this->database->connect()->prepare('
-            UPDATE projects SET "like" = "like" + 1 WHERE id = :id
-         ');
-
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        $stmt->execute();
-    }
-
-    public function dislike(int $id) {
-        $stmt = $this->database->connect()->prepare('
-            UPDATE projects SET dislike = dislike + 1 WHERE id = :id
-         ');
-
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        $stmt->execute();
-    }
 }
