@@ -1,17 +1,18 @@
 body{
     margin: 0;
-    background: #ead4b7;
+    background: transparent linear-gradient(58deg, #D975929C 0%, #F4FF53A8 100%) no-repeat padding-box;
+    /*background: #ead4b7;*/
     font: italic normal 1.5vw/1.5vw Segoe UI;
     color: #c2bdbd67;
 }
 
 .container{
-    background: #ead4b7;
+
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
+    justify-content: center;
     align-items: center;
 }
 .respo{ 
@@ -63,6 +64,10 @@ input{
     border-radius: 1em;
     box-shadow: 0 0 0.2em red;
     outline: none;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
 }
 @media screen and (max-width: 411px) {
    
